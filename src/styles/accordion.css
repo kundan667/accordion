@@ -1,0 +1,49 @@
+.accordion {
+
+    padding: 0 0.8rem;
+    /* border: 1px solid #e4e4e4; */
+
+    /* display: flex; */
+    align-items: center;
+    /* justify-content: space-between; */
+    color: #fff;
+    gap: 5px;
+
+    /* height: 42px; */
+    min-width: 200px;
+    overflow: hidden;
+    transition: height 1s;
+    /* min-width: 300px; */
+    /* margin-top: .2rem; */
+}
+
+.accordion_child {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 1.2rem;
+    position: relative;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.accordion_child:hover {
+    background: #0a2a3c;
+}
+
+.arrow {
+    position: absolute;
+    left: 0;
+}
+
+.accordion_recursion {
+    /* display: none; */
+    /* height: 0; */
+    transition: height 0.2s;
+}
+
+.accordion_container {
+    width: 300px;
+    background: #083344;
+    border-radius: 6px;
+    padding: 0.5rem 0;
+}
