@@ -1,3 +1,8 @@
+1. This is a simple app which can be used to render accordion with infinite depth.
+2. This is achieved by using recursion
+3. Whenever the loop encounter item which has child it call the recursion function
+4. And recursion function returns the with accordion name and again check if it has child and this keeps going.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
