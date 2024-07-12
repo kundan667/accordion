@@ -11,6 +11,7 @@
     min-width: 200px;
     overflow: hidden;
     transition: height 1s;
+    user-select: none;
     /* min-width: 300px; */
     /* margin-top: .2rem; */
 }
