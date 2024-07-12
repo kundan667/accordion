@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Accordion from './components/Accordion';
 
@@ -54,34 +53,19 @@ const sampleData = {
 
 function App() {
 
-  const AccordionRecursion = ({ item, index }) => {
-    // console.log("ChildAccordion:", item);
-
-    const getPadding = (e) => {
-      console.log("e:", e);
-    }
-    const handleClick = (e) => {
-      // console.log("e:", e.target)
-    }
+  const AccordionRecursion = ({ item }) => {
     return (
       <>
         {
           item.map((d, i) => (
-            // <div>
             <Accordion name={d.name}
-              showArrow={d?.child?.length > 0}
-            // leftPadding={20 * ((i + 1))}
-            // leftPadding={() => getPadding()}
-            // isChild={true}
-            >
+              showArrow={d?.child?.length > 0} >
               {d?.child?.length > 0 && (
                 <div className='accordion_recursion' style={{ display: 'none' }}>
                   <AccordionRecursion item={d.child} index={i + 1} />
                 </div>
               )}
             </Accordion>
-
-            // </div>
           ))
         }
       </>
@@ -91,11 +75,9 @@ function App() {
   return (
     <div className="App">
       <div className='accordion_container'>
-
         {
           sampleData.data.map((item, index) => (
             <div>
-              {/* <AccordionRecursion item={item} /> */}
               <Accordion name={item.name} showArrow={item?.child?.length > 0} >
                 {item?.child?.length > 0 && (
                   <div className='accordion_recursion' style={{ display: 'none' }}>
@@ -103,9 +85,7 @@ function App() {
                   </div>
                 )}
               </Accordion>
-
             </div>
-
           ))
         }
       </div>
